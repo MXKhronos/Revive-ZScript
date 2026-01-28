@@ -2,22 +2,22 @@
 layout: default
 title: Home
 nav_order: 1
-description: "Welcome to Z-Sharp."
+description: "Welcome to Revive Engine's ZScript."
 permalink: /
 ---
 
-Welcome to Z-Sharp.
+Welcome to Revive Engine's ZScript.
 
-ZSharp runs on a sandboxed `lua` environment on the Revive engine.
+ZScript runs on a sandboxed `luau` environment on the Revive engine.
 
-1. [Getting Started](#getting-started-using-zsharp)
+1. [Getting Started](#getting-started-using-zscript)
 2. [Terminal](#terminal)
 3. [ZSCode](#zscode)
 4. [Libraries](#libraries)
 5. [Examples](#examples)
 6. [Why It's Made](#why-its-made)
 
-### Getting Started using ZSharp:
+### Getting Started using ZScript:
 - Locate and open up a terminal in [game](https://www.roblox.com/games/141084271/Rise-of-the-Dead).
 
 ---
@@ -27,8 +27,8 @@ ZSharp runs on a sandboxed `lua` environment on the Revive engine.
 
 The terminal mimicks a unix-based terminal but currently it has no file structure.
 
-There are **two ways of running ZSharp**:
-1) Using the `run` command on the terminal, anything after the `run` command will be interpreted as ZSharp.
+There are **two ways of running ZScript**:
+1) Using the `run` command on the terminal, anything after the `run` command will be interpreted as ZScript.
 
 ```lua
 run log("Hello World!");
@@ -43,7 +43,7 @@ run log("Hello World!");
 
 ![ZSCode](resources/images/zscode.png)
 
-Currently, you'll be defaulted to `untitled.zs` and there are no saving and loading functionality. The output which was once the terminal's output will now show up as the output window.
+Currently, you'll be defaulted to `zscode.zs` and there are no saving and loading functionality. The output which was once the terminal's output will now show up as the output window.
 
 To run your script, you can press the **Run** button on the bottom left.
 
@@ -61,12 +61,12 @@ To run your script, you can press the **Run** button on the bottom left.
 
 ---
 ### Examples
-These are examples of what you can currently do in ZSharp.
+These are examples of what you can currently do in ZScript.
 
 ---
 
 `void` **help**(path: *string*)
-**ZSharp** has a built in `help` function to list available libraries and shows it's hints and descriptions.
+**ZScript** has a built in `help` function to list available libraries and shows it's hints and descriptions.
 
 > More info [here](docs/global.md#help)
 

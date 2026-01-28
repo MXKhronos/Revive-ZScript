@@ -1,0 +1,83 @@
+local PlayerHomes = {};
+
+CommandService:BindCommand("sethome", {
+    Permission = "DevBranch";
+    Description = [[Sets your home position. e.g.
+        /sethome farm
+    ]];
+    UsageInfo = "/sethome [homeName]";
+    Function = function(player: Player, args)
+        local homeName = args[1] and tostring(args[1]) or "default";
+
+        local homesList = PlayerHomes[player];
+        if homesList == nil then
+            homesList = {};
+            PlayerHomes[player] = homesList;
+        end
+
+        local newHome = {CFrame=player:GetCFrame();};
+		local oldHome = homesList[homeName];
+        homesList[homeName] = newHome;
+
+		if oldHome == nil then
+        	notify(player, `Set home {homeName} for {player.Name}`, "Inform");
+		else
+			notify(player, `Updated home {homeName} for {player.Name}`, "Inform");
+		end
+    end;
+});
+
+CommandService:BindCommand("home", {
+    Permission = "DevBranch";
+    Description = [[Teleport to your home position. e.g.
+        /home farm
+    ]];
+    UsageInfo = "/home [homeName]";
+    Function = function(player: Player, args)
+        local homeName = args[1] and tostring(args[1]) or "default";
+
+        local homesList = PlayerHomes[player];
+        if homesList == nil then
+            homesList = {};
+            PlayerHomes[player] = homesList;
+        end
+
+        local getHome = homesList[homeName];
+		if getHome == nil then
+			notify(player, `Home {homeName} does not exist.`, "Error");
+			return;
+		end
+
+		player:SetCFrame(getHome.CFrame);
+
+        notify(player, `Set home {homeName} for {player.Name}`, "Inform");
+    end;
+});
+
+CommandService:BindCommand("homes", {
+    Permission = "DevBranch";
+    Description = [[List all the homes you have.
+        /home farm
+    ]];
+    UsageInfo = "/homes";
+    Function = function(player: Player, args)
+        
+
+        local homesList = PlayerHomes[player];
+        if homesList == nil then
+            notify(player, `No homes available.`, "Inform");
+            return;
+        end
+
+        local list = {};
+        for h, _ in pairs(homesList) do
+			table.insert(list, h);
+		end
+
+		notify(player, `Homes: {table.concat(list, ", ")}`, "Inform");
+    end;
+});
+
+PlayerService.OnPlayerDisconnected:Connect(function(player: Player)
+	PlayerHomes[player] = nil;
+end)

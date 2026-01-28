@@ -1,11 +1,11 @@
-title: [ZSharp Script]
+title: [ZScript]
 description: [A sandbox environment for the Revive Engine using lua]
 remote_theme: just-the-docs/just-the-docs
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 
-url: "https://mxkhronos.github.io/Revive-ZSharpScript/" # the base hostname & protocol for your site, e.g. http://example.com
-repository: MXKhronos/Revive-ZSharpScript # for github-metadata
+url: "https://mxkhronos.github.io/Revive-ZScript/" # the base hostname & protocol for your site, e.g. http://example.com
+repository: MXKhronos/Revive-ZScript # for github-metadata
 
 # Enable or disable the site search
 # Supports true (default) or false
@@ -38,7 +38,7 @@ search:
 
 aux_links:
   "View on GitHub":
-    - "//github.com/MXKhronos/Revive-ZSharpScript"
+    - "//github.com/MXKhronos/Revive-ZScript"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
