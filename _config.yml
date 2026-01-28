@@ -1,5 +1,5 @@
 title: [ZScript]
-description: [A sandbox environment for the Revive Engine using lua]
+description: [A sandbox environment for the Revive Engine using luau]
 remote_theme: just-the-docs/just-the-docs
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
@@ -43,7 +43,7 @@ aux_links:
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
 
-color_scheme: darker
+# color_scheme: darker
 
 enable_copy_code_button: true
 
