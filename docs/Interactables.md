@@ -10,7 +10,7 @@ ZScript will be usable by interactables to add unique functionalities that does 
 
 ZScript can return a dictionary to the engine to be handled. E.g. This below binds a function into the player interaction, when a interactable is prompted, it sets the message to "Hello "..`playerName`.
 
-```luau
+```lua
 local interactPackage = {};
 
 function interactPackage.BindPrompt(interactable: Interactable)

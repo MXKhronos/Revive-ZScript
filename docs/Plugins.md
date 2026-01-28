@@ -11,7 +11,7 @@ The first implementation of ZScript in the Revive Engine will be plugins for cus
 #### Custom Commands
 Using the [CommandService](CommandService), you can bind a commands onto the server. e.g. `/hello` prints "World!" into console.
 
-```luau
+```lua
 CommandService:BindCommand("hello", {
 	Permission = "All";
 	Description = "Hello command.";

@@ -57,7 +57,7 @@ This is a example to add a `/sethome` and `/home` command. Using:
 - [PlayerService.OnPlayerDisconnected](PlayerService)
 
 
-```luau
+```lua
 local PlayerHomes = {};
 
 CommandService:BindCommand("sethome", {
