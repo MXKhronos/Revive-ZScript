@@ -9,6 +9,7 @@ nav_order: 3
 The first implementation of ZScript in the Revive Engine will be plugins for custom servers. Just like Minecraft/Rust server plugins, these will allow you to add custom functionalities.
 
 #### Custom Commands
+
 Using the [CommandService](CommandService), you can bind a commands onto the server. e.g. `/hello` prints "World!" into console.
 
 ```lua
@@ -23,4 +24,7 @@ CommandService:BindCommand("hello", {
 ```
 
 #### Home Plugin
+
 Here is an example that allow players to use `/sethome` set a home at a CFrame and `/home` to teleport back to that CFrame. 
+
+[zsHomePlugin](https://github.com/MXKhronos/Revive-ZScript/blob/main/ZScript/Scripts/zsHomePlugin.txt)
